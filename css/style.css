@@ -1,0 +1,149 @@
+/* ========================================
+   키즈홈 - 스타일시트
+   ======================================== */
+
+/* 기본 폰트 설정 */
+* {
+  font-family: 'Pretendard', sans-serif;
+}
+
+/* ========================================
+   햄버거 메뉴 애니메이션
+   ======================================== */
+.hamburger-active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* ========================================
+   스크롤바 숨김
+   ======================================== */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ========================================
+   커스텀 스타일 (필요시 추가)
+   ======================================== */
+
+/* 드롭다운 메뉴 호버 효과 */
+.menu-btn:hover,
+.guide-btn:hover {
+  background-color: #f3f4f6;
+}
+
+/* 활성화된 메뉴 버튼 */
+.menu-btn.active,
+.guide-btn.active {
+  background-color: #fed7aa;
+  color: #f97316;
+}
+
+/* 모달 배경 페이드 효과 */
+#termsModal,
+#privacyModal {
+  backdrop-filter: blur(2px);
+}
+
+/* 플로팅 버튼 그림자 */
+#floatingTocToggle {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 메인 콘텐츠 이미지 호버 효과 */
+.main-icon-hover {
+  transition: transform 0.3s ease;
+}
+
+.main-icon-hover:hover {
+  transform: scale(1.05);
+}
+
+/* 탭 버튼 활성화 스타일 */
+.tab-active {
+  background-color: #38bdf8;
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* 폼 입력 포커스 스타일 */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+}
+
+/* 버튼 클릭 효과 */
+button:active {
+  transform: scale(0.98);
+}
+
+/* 링크 호버 효과 */
+a:hover {
+  opacity: 0.9;
+}
+
+/* 카드 호버 효과 */
+.card-hover:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* 모바일 메뉴 슬라이드 효과 */
+#mobileMenu {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 오버레이 페이드 효과 */
+#menuOverlay {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* 드롭다운 애니메이션 */
+[id^="menuDropdown"],
+#guideDropdown {
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 반응형 폰트 크기 조정 */
+@media (max-width: 640px) {
+  .responsive-text {
+    font-size: 0.875rem;
+  }
+}
+
+/* 프린트 스타일 */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+  }
+}
